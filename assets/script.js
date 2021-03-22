@@ -6,8 +6,8 @@ let piano = document.querySelector(".container-piano"),
 
 document.addEventListener("keypress", (event) => {
   console.log(event.key);
-  if (!hotkeys.includes(event.key.toUpperCase())) return;
-  document.querySelector(`[data-hotkey='${event.key.toUpperCase()}']`).click();
+  if (!hotkeys.includes(event.code[3].toUpperCase())) return;
+  document.querySelector(`[data-hotkey='${event.code[3].toUpperCase()}']`).click();
 });
 
 fullScreenButton.addEventListener("click", (event) => {
